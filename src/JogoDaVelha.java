@@ -21,6 +21,8 @@ public class JogoDaVelha {
                 if (verificarJogada(velha, jogar(scan, simboloAtual), simboloAtual)) {
                     vitoria = verificarVitoria(velha);
                     if (vitoria) {
+                        System.out.println();
+                        desenhaJogo(velha);
                         System.out.printf("Jogador %s venceu!%n", simboloAtual);
                         break;
                     }
@@ -46,12 +48,12 @@ public class JogoDaVelha {
     public static void desenhaJogo(Campo[][] velha) {
 
         System.out.println();
-        System.out.println("     0    1     2");
-        System.out.printf("0   %c  | %c  |  %c %n", velha[0][0].getSimbolo(), velha[0][1].getSimbolo(), velha[0][2].getSimbolo());
+        System.out.println("    0     1     2");
+        System.out.printf("0   %c  |  %c  |  %c %n", velha[0][0].getSimbolo(), velha[0][1].getSimbolo(), velha[0][2].getSimbolo());
         System.out.println("   ---------------");
-        System.out.printf("1   %c  | %c  |  %c %n", velha[1][0].getSimbolo(), velha[1][1].getSimbolo(), velha[1][2].getSimbolo());
+        System.out.printf("1   %c  |  %c  |  %c %n", velha[1][0].getSimbolo(), velha[1][1].getSimbolo(), velha[1][2].getSimbolo());
         System.out.println("   ---------------");
-        System.out.printf("2   %c  | %c  |  %c %n", velha[2][0].getSimbolo(), velha[2][1].getSimbolo(), velha[2][2].getSimbolo());
+        System.out.printf("2   %c  |  %c  |  %c %n", velha[2][0].getSimbolo(), velha[2][1].getSimbolo(), velha[2][2].getSimbolo());
     }
 
     public static void limparTela() {
